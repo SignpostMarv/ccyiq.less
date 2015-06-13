@@ -1,0 +1,26 @@
+{
+    "name": "ccyiq.less",
+    "version": "0.1.0",
+    "authors": [
+        "SignpostMarv <me@signpostmarv.name>"
+    ],
+    "description": "less implementation of algorithm described in http://24ways.org/2010/calculating-color-contrast/",
+    "main": "ccyiq.less",
+    "keywords": [
+        "less",
+        "color",
+        "contrast",
+        "yiq"
+    ],
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:SignpostMarv/ccyiq.less.git"
+    }
+}

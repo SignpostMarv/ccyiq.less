@@ -1,0 +1,23 @@
+.ccyiq(@against, @redBias:299, @greenBias:587, @blueBias:114){
+    /**
+    * Based on work by @briansuda
+    * http://24ways.org/2010/calculating-color-contrast/#author
+    * @author SignpostMarv
+    */
+    .return(@yiq) when(@yiq >= 128){
+        @ccyiq: #000 ;
+    }
+    .return(@yiq) when(@yiq < 128){
+        @ccyiq: #fff ;
+    }
+    @biasTotal: (@redBias + @greenBias + @blueBias) ;
+    @r: red(@against) ;
+    @g: green(@against) ;
+    @b: blue(@against) ;
+    @rgbBiased: (
+        (@r * @redBias) +
+        (@g * @greenBias) +
+        (@b * @blueBias)
+    ) ;
+    .return((@rgbBiased / @biasTotal));
+}
